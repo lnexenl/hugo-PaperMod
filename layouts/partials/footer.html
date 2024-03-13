@@ -1,10 +1,19 @@
 {{- if not (.Param "hideFooter") }}
-<footer class="footer">
+<footer class="footer" style="text-align:center;">
+    <div style="text-align:center;">
+        <span>
+            My posts are released under a <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en_GB">CC BY-NC
+                4.0</a> license
+        </span>
+
+    </div>
+
     {{- if site.Copyright }}
     <span>{{ site.Copyright | markdownify }}</span>
     {{- else }}
     <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
     {{- end }}
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
